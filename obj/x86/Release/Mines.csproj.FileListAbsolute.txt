@@ -1,0 +1,7 @@
+C:\Users\odvorak\Desktop\tmp\Mines\Mines\Mines\bin\Release\Mines.exe
+C:\Users\odvorak\Desktop\tmp\Mines\Mines\Mines\bin\Release\Mines.pdb
+C:\Users\odvorak\Desktop\tmp\Mines\Mines\Mines\obj\x86\Release\Mines.Form1.resources
+C:\Users\odvorak\Desktop\tmp\Mines\Mines\Mines\obj\x86\Release\Mines.Properties.Resources.resources
+C:\Users\odvorak\Desktop\tmp\Mines\Mines\Mines\obj\x86\Release\Mines.csproj.GenerateResource.Cache
+C:\Users\odvorak\Desktop\tmp\Mines\Mines\Mines\obj\x86\Release\Mines.exe
+C:\Users\odvorak\Desktop\tmp\Mines\Mines\Mines\obj\x86\Release\Mines.pdb
