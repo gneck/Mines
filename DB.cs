@@ -39,5 +39,30 @@ namespace Mines
 
             return result;
         }
+
+        public void tah()
+        {
+            openConnection();
+
+            OdbcCommand cmd = new OdbcCommand();
+            cmd.CommandText = "INSERT INTO tah (oblast_id, radek, sloupec, cas_razitko) " +
+                "SELECT oblast_id, radek, sloupec, CURRENT_TIMESTAMP FROM pole WHERE hodnota='x'" +
+                "AND oblast_id=(SELECT max(id) FROM oblast)";
+
+            cmd.ExecuteNonQuery();
+            closeConnection(con);
+        }
+
+        public void hraciPlocha(int sloupcu, int radku, int min)
+        {
+            openConnection();
+
+            OdbcCommand cmd = new OdbcCommand();
+            cmd.CommandText = "INSERT INTO OBLAST(POCET_SLOUPCU, POCET_RADKU, POCET_MIN) " +
+                "VALUES(" + sloupcu + ", " + radku + ", " + min + ");";
+
+            cmd.ExecuteNonQuery();
+            closeConnection(con);
+        } 
     }
 }
