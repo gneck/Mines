@@ -24,6 +24,9 @@ namespace Mines
             try
             {
                 // zjištění velikosti minového pole
+                String hrac = Interaction.InputBox("Zadejte jméno/přezdívku: ", "Hledání min - hráč", "");
+
+                // zjištění velikosti minového pole
                 String[] size = Interaction.InputBox("Velikost hrací plochy: (Max. " + MAX + " x " + MAX + ")", "Hledání min - hrací plocha", "10x10").Split('x');
 
                 int x_length = int.Parse(size[0]) < MAX ? int.Parse(size[0]) : MAX;
