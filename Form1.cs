@@ -51,7 +51,7 @@ namespace Mines
         //ssadas
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Text = "Hledání min " + ++this.time + "s";
+            this.Text = "Hledání min " + ++this.time + "s"; 
         }
    }        
 }
