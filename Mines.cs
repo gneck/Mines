@@ -48,7 +48,8 @@ namespace Mines
         }
 
         // použití tablelayoutpanelu (obdobné jako Java Grid Layout) aplikace se nehorázně zasekává -> ukázka automatického resizování buňěk
-        // imho je lepší použít klasický panel, práce s tablelayoutpanelem je sice jednodušší a nastaví si sám velikost jednotlivých buněk, avšak hrozně se to seká, nedoporučuju používat pro tyto účely (snažil sem se aby byl výsledek shodný ve všech jazycích)
+        // imho je lepší použít klasický panel, práce s tablelayoutpanelem je sice jednodušší a 
+        //nastaví si sám velikost jednotlivých buněk, avšak hrozně se to seká, nedoporučuju používat pro tyto účely (snažil sem se aby byl výsledek shodný ve všech jazycích)
         public void createField()
         {
             _form.field = new TableLayoutPanel();
@@ -59,7 +60,7 @@ namespace Mines
 
             _form.field.ColumnCount = _xLength;
             _form.field.RowCount = _yLength;
-
+            
             this.generateMines();
             _buttons = new MineButton[_xLength, _yLength];
 
@@ -81,7 +82,7 @@ namespace Mines
                     _form.field.Controls.Add(_buttons[x, y], x, y);
                 }
             }
-
+           
             _form.Controls.Add(_form.field);
         }
 

@@ -36,11 +36,16 @@ namespace Mines
                 int count_of_mines = int.Parse(Interaction.InputBox("Počet min: (menší než " + (x_length * y_length) + ")", "Hledání min - počet min", "5"));
                 if (count_of_mines > (x_length * y_length)) count_of_mines = x_length * y_length;
 
+                //zobrazeni aktualnich statistik
+                statistics stat = new statistics();
+                string statistika = stat.getStatistika(count_of_mines);
+                Interaction.MsgBox("Statistika nejlepších hráčů pro tuto úroveň:\n\n 1.\tONdra\t34 vteřin\n ě.\tLucka\t51 vteřin\n 1.\tGneck\t63 vteřin");
+
                 // vytvoření instance s patřičnými parametry
                 Mines mines = new Mines(x_length, y_length, count_of_mines, this);
 
                 this.Width = mines._xLength * 50;
-                this.Height = mines._yLength * 50;
+                this.Height = mines._yLength * 50 + 10;
                 mines.createField();
             }
             catch
@@ -56,5 +61,10 @@ namespace Mines
         {
             this.Text = "Hledání min " + ++this.time + "s"; 
         }
-   }        
+
+        private void nováHraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+    }        
 }
