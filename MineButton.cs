@@ -7,7 +7,8 @@ using System.Drawing;
 
 namespace Mines
 {
-    // vlastní komponenta dědící z tlačítka obsahující navíc informaci o souřadnicích a přepsaný vzhled
+    // vlastní komponenta dědící z tlačítka obsahující navíc informaci 
+    //o souřadnicích a přepsaný vzhled
     public partial class MineButton : Button
     {
         public int _x;
