@@ -8,7 +8,7 @@ namespace Mines
 {
     class DB
     {
-        public const String connstring = "Server=46.28.110.195;Port=4999;Database=aswi_miny;Uid=aswi_miny;Pwd=Ksi2348asdkm8732;";
+        public const String connstring = "Server=students.kiv.zcu.cz;Port=1700;Database=aswi_miny;Uid=dvorak1;Pwd=A16N0007K;";
         OdbcConnection con;
 
         public void openConnection()
@@ -63,6 +63,18 @@ namespace Mines
 
             cmd.ExecuteNonQuery();
             closeConnection(con);
-        } 
+        }
+
+        public void vlozMina(int radek, int sloupec)
+        {
+            openConnection();
+
+            OdbcCommand cmd = new OdbcCommand();
+            cmd.CommandText = "INSERT INTO mina(hra, radek, sloupec) " +
+                "VALUES(" + Form1.ActiveForm.Name + ", " + radek + ", " + sloupec + ");";
+
+            cmd.ExecuteNonQuery();
+            closeConnection(con);
+        }
     }
 }

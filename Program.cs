@@ -17,5 +17,13 @@ namespace Mines
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+        static void run2()
+        {
+            DB db = new DB();
+            db.tah();
+            db.hraciPlocha(1, 1, 1);
+            db.vlozMina(1, 1);
+        }
     }
 }
